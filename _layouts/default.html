@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: \"en\" }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title | default: "Ardha" }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | default: \"Minimal portfolio\" }}">
+  <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}">
+</head>
+<body>
+  <div class="site">
+    <header class="top">
+      <div class="brand">
+        <h1 class="site-title">{{ site.title | default: site.author | default: "Ardha" }}</h1>
+        {% if site.tagline %}
+          <p class="tagline">{{ site.tagline }}</p>
+        {% endif %}
+      </div>
+
+      <nav aria-label="Primary" class="nav-links">
+        <a href="#about">About</a>
+        <a href="#subscribe">Subscribe</a>
+        <a href="#links">Links</a>
+      </nav>
+    </header>
+
+    <main class="content" role="main">
+      {{ content }}
+    </main>
+
+    <footer class="foot">
+      <small>© {{ site.time | date: "%Y" }} {{ site.author | default: "Ardha" }}</small>
+    </footer>
+  </div>
+</body>
+</html>

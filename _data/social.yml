@@ -1,0 +1,19 @@
+- name: "Substack"
+  url: "https://your-substack.substack.com"
+  icon: "substack"
+
+- name: "GitHub"
+  url: "https://github.com/ardhaxyz"
+  icon: "github"
+
+- name: "Twitter"
+  url: "https://twitter.com/yourhandle"
+  icon: "twitter"
+
+- name: "LinkedIn"
+  url: "https://www.linkedin.com/in/yourprofile"
+  icon: "linkedin"
+
+- name: "Email"
+  url: "mailto:you@example.com"
+  icon: "email"
