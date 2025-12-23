@@ -13,7 +13,3 @@
 - name: "LinkedIn"
   url: "https://www.linkedin.com/in/yourprofile"
   icon: "linkedin"
-
-- name: "Email"
-  url: "mailto:you@example.com"
-  icon: "email"

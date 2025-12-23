@@ -4,26 +4,28 @@ title: Home
 description: Short biography and links
 ---
 
-<section id="about" class="card intro-grid">
-  <div class="intro-copy">
-    <h2>Hello — I'm {{ site.author | default: "Ardha" }}</h2>
+<section class="hero">
+  <div class="hero-left">
+    <h1 class="greeting">Hej, Ardha!</h1>
 
     <p class="bio">
-      {{ site.bio | default: "I’m a researcher and writer interested in minimal interfaces, systems, and clarity. I build simple tools and write about design and engineering." }}
+      {{ site.bio | default: "With a background in Marine Science and a focus on data-driven policy analysis, I write about environment, economics, and minimal interfaces." }}
     </p>
 
-    <p>
-      <a class="btn-primary" id="subscribe" href="{{ site.substack | default: 'https://your-substack.substack.com' }}" target="_blank" rel="noopener">Read my Substack</a>
-    </p>
+    <ul class="meta-list">
+      {% if site.education %}
+        <li><strong>{{ site.education.date }}</strong> — {{ site.education.title }}</li>
+      {% endif %}
+    </ul>
 
-    <div id="links" class="social-row" aria-label="Social links">
+    <nav class="social-inline" aria-label="Social links">
       {% include social-icons.html %}
-    </div>
+    </nav>
   </div>
 
-  <div class="intro-avatar" aria-hidden="false">
+  <div class="hero-right" aria-hidden="false">
     {% if site.avatar %}
-      <img src="{{ site.avatar | relative_url }}" alt="{{ site.author | default: "Author" }}'s picture" class="avatar">
+      <img class="avatar" src="{{ site.avatar | relative_url }}" alt="{{ site.author | default: "Ardha" }}">
     {% else %}
       <div class="avatar avatar-fallback" aria-hidden="true">{{ site.author | default: "A" | slice: 0 }}</div>
     {% endif %}
